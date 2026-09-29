@@ -1,0 +1,10 @@
+Model,Family in classifier training,Threshold source,Threshold,Recall on FTP-Patator (%),Precision,FPR,FP,FN
+Logistic Regression,Yes,original validation F1,0.7134713530540466,99.82,0.144809,0.015681,6573,2
+Logistic Regression,No,original validation F1 (transferred),0.7134713530540466,99.28,0.146081,0.015438,6471,8
+Logistic Regression,No,family-free validation F1,0.7196041941642761,99.28,0.148591,0.015133,6343,8
+LightGBM,Yes,original validation F1,0.8466803851114438,99.91,0.870993,0.000394,165,1
+LightGBM,No,original validation F1 (transferred),0.8466803851114438,10.04,0.425856,0.00036,151,1003
+LightGBM,No,family-free validation F1,0.8681462282258657,2.42,0.164634,0.000327,137,1088
+Autoencoder,Weights: No,original validation F1,0.0019534705206751823,61.08,0.049784,0.03101,12998,434
+Autoencoder,Weights: No,family-free validation F1,0.0019979265052825212,52.91,0.04535,0.029631,12420,525
+Autoencoder,Weights: No,benign validation P95 (no attack labels),0.0015444818418473005,99.01,0.04944,0.05064,21226,11

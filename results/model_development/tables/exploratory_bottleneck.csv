@@ -1,0 +1,5 @@
+Bottleneck size,Validation AP
+8,0.9013
+16,0.8498
+24,0.8657
+32,0.8381

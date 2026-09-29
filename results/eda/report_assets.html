@@ -1,0 +1,1652 @@
+<!doctype html><html><head><meta charset='utf-8'><title>CIC-IDS2017 — EDA tables and figures</title><style>body{font-family:Arial,sans-serif;margin:24px;}table{border-collapse:collapse;font-size:12px;margin-bottom:24px;}th,td{border:1px solid #999;padding:4px 8px;text-align:right;}th{background:#eee;}</style></head><body><h1>CIC-IDS2017 — EDA tables and figures</h1><p><b>Tables:</b> select a table, copy it and paste it into Word or Google Docs. <b>Figures:</b> right-click an image and copy it, or insert the PNG files from the <code>figures/</code> folder.</p><h2>Tables</h2><h3>table01_raw_missing_values</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>item</th>
+      <th>raw_missing_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Flow Bytes/s</td>
+      <td>1358</td>
+    </tr>
+  </tbody>
+</table><h3>table02_infinite_values</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>item</th>
+      <th>infinite_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Flow Bytes/s</td>
+      <td>1509</td>
+    </tr>
+    <tr>
+      <td>Flow Packets/s</td>
+      <td>2867</td>
+    </tr>
+  </tbody>
+</table><h3>table03_duplicated_rows_by_label</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label</th>
+      <th>pct_of_duplicated_rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BENIGN</td>
+      <td>58.564</td>
+    </tr>
+    <tr>
+      <td>PortScan</td>
+      <td>25.165</td>
+    </tr>
+    <tr>
+      <td>DoS Hulk</td>
+      <td>14.73</td>
+    </tr>
+    <tr>
+      <td>SSH-Patator</td>
+      <td>0.699</td>
+    </tr>
+    <tr>
+      <td>FTP-Patator</td>
+      <td>0.607</td>
+    </tr>
+    <tr>
+      <td>DoS slowloris</td>
+      <td>0.126</td>
+    </tr>
+    <tr>
+      <td>DoS Slowhttptest</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <td>Web Attack � Brute Force</td>
+      <td>0.015</td>
+    </tr>
+    <tr>
+      <td>DDoS</td>
+      <td>0.005</td>
+    </tr>
+    <tr>
+      <td>Bot</td>
+      <td>0.005</td>
+    </tr>
+    <tr>
+      <td>DoS GoldenEye</td>
+      <td>0.003</td>
+    </tr>
+  </tbody>
+</table><h3>table04_duplicates_summary</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>metric</th>
+      <th>value</th>
+      <th>pct_of_rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Full-row duplicates</td>
+      <td>256479</td>
+      <td>9.06048</td>
+    </tr>
+    <tr>
+      <td>Feature-level duplicates</td>
+      <td>309079</td>
+      <td>10.9187</td>
+    </tr>
+    <tr>
+      <td>Duplicate feature groups</td>
+      <td>95479</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Groups with conflicting labels</td>
+      <td>698</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Rows in conflicting groups</td>
+      <td>7020</td>
+      <td>0.247991</td>
+    </tr>
+  </tbody>
+</table><h3>table05_negative_values</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>column</th>
+      <th>negative_count</th>
+      <th>negative_pct</th>
+      <th>min_value</th>
+      <th>distinct_negative_values</th>
+      <th>attack_share_of_negatives_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Init_Win_bytes_backward</td>
+      <td>1441552</td>
+      <td>50.9249</td>
+      <td>-1</td>
+      <td>1</td>
+      <td>8.50271</td>
+    </tr>
+    <tr>
+      <td>Init_Win_bytes_forward</td>
+      <td>1001189</td>
+      <td>35.3684</td>
+      <td>-1</td>
+      <td>1</td>
+      <td>0.000699169</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Min</td>
+      <td>2891</td>
+      <td>0.102129</td>
+      <td>-14</td>
+      <td>12</td>
+      <td>6.71048</td>
+    </tr>
+    <tr>
+      <td>Flow Duration</td>
+      <td>115</td>
+      <td>0.00406254</td>
+      <td>-13</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Flow Packets/s</td>
+      <td>115</td>
+      <td>0.00406254</td>
+      <td>-2,000,000</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Mean</td>
+      <td>115</td>
+      <td>0.00406254</td>
+      <td>-13</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>115</td>
+      <td>0.00406254</td>
+      <td>-13</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Flow Bytes/s</td>
+      <td>85</td>
+      <td>0.00300275</td>
+      <td>-261,000,000</td>
+      <td>9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>35</td>
+      <td>0.00123642</td>
+      <td>-32,212,234,632</td>
+      <td>27</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length.1</td>
+      <td>35</td>
+      <td>0.00123642</td>
+      <td>-32,212,234,632</td>
+      <td>27</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>min_seg_size_forward</td>
+      <td>35</td>
+      <td>0.00123642</td>
+      <td>-536,870,661</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>22</td>
+      <td>0.000777181</td>
+      <td>-1,073,741,320</td>
+      <td>17</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Min</td>
+      <td>17</td>
+      <td>0.000600549</td>
+      <td>-12</td>
+      <td>3</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table><h3>table06_missing_after_cleaning</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>item</th>
+      <th>missing_count</th>
+      <th>missing_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Flow Packets/s</td>
+      <td>2982</td>
+      <td>0.105343</td>
+    </tr>
+    <tr>
+      <td>Flow Bytes/s</td>
+      <td>2952</td>
+      <td>0.104284</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Min</td>
+      <td>2891</td>
+      <td>0.102129</td>
+    </tr>
+    <tr>
+      <td>Flow Duration</td>
+      <td>115</td>
+      <td>0.00406254</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Mean</td>
+      <td>115</td>
+      <td>0.00406254</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>115</td>
+      <td>0.00406254</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>35</td>
+      <td>0.00123642</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length.1</td>
+      <td>35</td>
+      <td>0.00123642</td>
+    </tr>
+    <tr>
+      <td>min_seg_size_forward</td>
+      <td>35</td>
+      <td>0.00123642</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>22</td>
+      <td>0.000777181</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Min</td>
+      <td>17</td>
+      <td>0.000600549</td>
+    </tr>
+  </tbody>
+</table><h3>table07_constant_columns</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>constant_column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bwd PSH Flags</td>
+    </tr>
+    <tr>
+      <td>Bwd URG Flags</td>
+    </tr>
+    <tr>
+      <td>Fwd Avg Bytes/Bulk</td>
+    </tr>
+    <tr>
+      <td>Fwd Avg Packets/Bulk</td>
+    </tr>
+    <tr>
+      <td>Fwd Avg Bulk Rate</td>
+    </tr>
+    <tr>
+      <td>Bwd Avg Bytes/Bulk</td>
+    </tr>
+    <tr>
+      <td>Bwd Avg Packets/Bulk</td>
+    </tr>
+    <tr>
+      <td>Bwd Avg Bulk Rate</td>
+    </tr>
+  </tbody>
+</table><h3>table08_duplicate_columns</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>kept_column</th>
+      <th>duplicate_column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Subflow Fwd Packets</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Subflow Bwd Packets</td>
+    </tr>
+    <tr>
+      <td>Fwd PSH Flags</td>
+      <td>SYN Flag Count</td>
+    </tr>
+    <tr>
+      <td>Fwd URG Flags</td>
+      <td>CWE Flag Count</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>Fwd Header Length.1</td>
+    </tr>
+  </tbody>
+</table><h3>table09_class_distribution</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label</th>
+      <th>count</th>
+      <th>percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BENIGN</td>
+      <td>2273097</td>
+      <td>80.3</td>
+    </tr>
+    <tr>
+      <td>DoS Hulk</td>
+      <td>231073</td>
+      <td>8.163</td>
+    </tr>
+    <tr>
+      <td>PortScan</td>
+      <td>158930</td>
+      <td>5.614</td>
+    </tr>
+    <tr>
+      <td>DDoS</td>
+      <td>128027</td>
+      <td>4.523</td>
+    </tr>
+    <tr>
+      <td>DoS GoldenEye</td>
+      <td>10293</td>
+      <td>0.364</td>
+    </tr>
+    <tr>
+      <td>FTP-Patator</td>
+      <td>7938</td>
+      <td>0.28</td>
+    </tr>
+    <tr>
+      <td>SSH-Patator</td>
+      <td>5897</td>
+      <td>0.208</td>
+    </tr>
+    <tr>
+      <td>DoS slowloris</td>
+      <td>5796</td>
+      <td>0.205</td>
+    </tr>
+    <tr>
+      <td>DoS Slowhttptest</td>
+      <td>5499</td>
+      <td>0.194</td>
+    </tr>
+    <tr>
+      <td>Bot</td>
+      <td>1966</td>
+      <td>0.069</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Brute Force</td>
+      <td>1507</td>
+      <td>0.053</td>
+    </tr>
+    <tr>
+      <td>Web Attack - XSS</td>
+      <td>652</td>
+      <td>0.023</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>36</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Sql Injection</td>
+      <td>21</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <td>Heartbleed</td>
+      <td>11</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table><h3>table10_binary_distribution</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label_binary</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BENIGN</td>
+      <td>2273097</td>
+    </tr>
+    <tr>
+      <td>ATTACK</td>
+      <td>557646</td>
+    </tr>
+  </tbody>
+</table><h3>table11_high_correlation_pairs</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature_1</th>
+      <th>feature_2</th>
+      <th>correlation</th>
+      <th>abs_correlation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fwd Packet Length Mean</td>
+      <td>Avg Fwd Segment Size</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Fwd URG Flags</td>
+      <td>CWE Flag Count</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Fwd PSH Flags</td>
+      <td>SYN Flag Count</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>Fwd Header Length.1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Subflow Fwd Packets</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Subflow Bwd Packets</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Total Length of Fwd Packets</td>
+      <td>Subflow Fwd Bytes</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RST Flag Count</td>
+      <td>ECE Flag Count</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Flow Duration</td>
+      <td>Fwd IAT Total</td>
+      <td>0.998208</td>
+      <td>0.998208</td>
+    </tr>
+    <tr>
+      <td>Packet Length Mean</td>
+      <td>Average Packet Size</td>
+      <td>0.997812</td>
+      <td>0.997812</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>Fwd IAT Max</td>
+      <td>0.997353</td>
+      <td>0.997353</td>
+    </tr>
+    <tr>
+      <td>Subflow Bwd Packets</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.991797</td>
+      <td>0.991797</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.991797</td>
+      <td>0.991797</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Total Length of Bwd Packets</td>
+      <td>0.991797</td>
+      <td>0.991797</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>Subflow Bwd Packets</td>
+      <td>0.991797</td>
+      <td>0.991797</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>Subflow Bwd Packets</td>
+      <td>0.990906</td>
+      <td>0.990906</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Bwd Header Length</td>
+      <td>0.990906</td>
+      <td>0.990906</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Fwd Header Length.1</td>
+      <td>0.990569</td>
+      <td>0.990569</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Fwd Header Length</td>
+      <td>0.990569</td>
+      <td>0.990569</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length.1</td>
+      <td>Subflow Fwd Packets</td>
+      <td>0.990569</td>
+      <td>0.990569</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>Subflow Fwd Packets</td>
+      <td>0.990569</td>
+      <td>0.990569</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>Idle Max</td>
+      <td>0.990515</td>
+      <td>0.990515</td>
+    </tr>
+    <tr>
+      <td>Idle Mean</td>
+      <td>Idle Max</td>
+      <td>0.990489</td>
+      <td>0.990489</td>
+    </tr>
+    <tr>
+      <td>Idle Mean</td>
+      <td>Idle Min</td>
+      <td>0.990319</td>
+      <td>0.990319</td>
+    </tr>
+    <tr>
+      <td>Flow Packets/s</td>
+      <td>Fwd Packets/s</td>
+      <td>0.989684</td>
+      <td>0.989684</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Max</td>
+      <td>Idle Max</td>
+      <td>0.988655</td>
+      <td>0.988655</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Total Length of Bwd Packets</td>
+      <td>0.986374</td>
+      <td>0.986374</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>Subflow Fwd Packets</td>
+      <td>0.986374</td>
+      <td>0.986374</td>
+    </tr>
+    <tr>
+      <td>Subflow Fwd Packets</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.986372</td>
+      <td>0.986372</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.986372</td>
+      <td>0.986372</td>
+    </tr>
+    <tr>
+      <td>Max Packet Length</td>
+      <td>Packet Length Std</td>
+      <td>0.98474</td>
+      <td>0.98474</td>
+    </tr>
+    <tr>
+      <td>Subflow Fwd Packets</td>
+      <td>Subflow Bwd Packets</td>
+      <td>0.983949</td>
+      <td>0.983949</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Subflow Bwd Packets</td>
+      <td>0.983949</td>
+      <td>0.983949</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Total Backward Packets</td>
+      <td>0.983949</td>
+      <td>0.983949</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Subflow Fwd Packets</td>
+      <td>0.983949</td>
+      <td>0.983949</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Max</td>
+      <td>Bwd Packet Length Std</td>
+      <td>0.982431</td>
+      <td>0.982431</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>Idle Mean</td>
+      <td>0.981123</td>
+      <td>0.981123</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Max</td>
+      <td>Idle Mean</td>
+      <td>0.978444</td>
+      <td>0.978444</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>Bwd Header Length</td>
+      <td>0.975555</td>
+      <td>0.975555</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.975555</td>
+      <td>0.975555</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>Fwd Header Length</td>
+      <td>0.971058</td>
+      <td>0.971058</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>Fwd Header Length.1</td>
+      <td>0.971058</td>
+      <td>0.971058</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length.1</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.971056</td>
+      <td>0.971056</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.971056</td>
+      <td>0.971056</td>
+    </tr>
+    <tr>
+      <td>Fwd Packet Length Max</td>
+      <td>Fwd Packet Length Std</td>
+      <td>0.970857</td>
+      <td>0.970857</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length.1</td>
+      <td>Subflow Bwd Packets</td>
+      <td>0.969612</td>
+      <td>0.969612</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Fwd Header Length</td>
+      <td>0.969612</td>
+      <td>0.969612</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>Subflow Bwd Packets</td>
+      <td>0.969612</td>
+      <td>0.969612</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>Fwd Header Length.1</td>
+      <td>0.969612</td>
+      <td>0.969612</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>Subflow Fwd Packets</td>
+      <td>0.968733</td>
+      <td>0.968733</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>Bwd Header Length</td>
+      <td>0.968733</td>
+      <td>0.968733</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>Fwd Header Length.1</td>
+      <td>0.966033</td>
+      <td>0.966033</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>Bwd Header Length</td>
+      <td>0.966033</td>
+      <td>0.966033</td>
+    </tr>
+    <tr>
+      <td>Subflow Bwd Bytes</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.966022</td>
+      <td>0.966022</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.96602</td>
+      <td>0.96602</td>
+    </tr>
+    <tr>
+      <td>Subflow Bwd Packets</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.963554</td>
+      <td>0.963554</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.963554</td>
+      <td>0.963554</td>
+    </tr>
+    <tr>
+      <td>Idle Max</td>
+      <td>Idle Min</td>
+      <td>0.96222</td>
+      <td>0.96222</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Max</td>
+      <td>Bwd Packet Length Mean</td>
+      <td>0.958618</td>
+      <td>0.958618</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Max</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.958618</td>
+      <td>0.958618</td>
+    </tr>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.957617</td>
+      <td>0.957617</td>
+    </tr>
+    <tr>
+      <td>Subflow Fwd Packets</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.957617</td>
+      <td>0.957617</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>Idle Min</td>
+      <td>0.953175</td>
+      <td>0.953175</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Max</td>
+      <td>Idle Min</td>
+      <td>0.949684</td>
+      <td>0.949684</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Max</td>
+      <td>Max Packet Length</td>
+      <td>0.949527</td>
+      <td>0.949527</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Std</td>
+      <td>Packet Length Std</td>
+      <td>0.942534</td>
+      <td>0.942534</td>
+    </tr>
+    <tr>
+      <td>Packet Length Std</td>
+      <td>Average Packet Size</td>
+      <td>0.942136</td>
+      <td>0.942136</td>
+    </tr>
+    <tr>
+      <td>Packet Length Mean</td>
+      <td>Packet Length Std</td>
+      <td>0.941731</td>
+      <td>0.941731</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Max</td>
+      <td>Packet Length Std</td>
+      <td>0.940388</td>
+      <td>0.940388</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Std</td>
+      <td>Flow IAT Max</td>
+      <td>0.939679</td>
+      <td>0.939679</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>Bwd Packet Length Std</td>
+      <td>0.939046</td>
+      <td>0.939046</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Std</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.939046</td>
+      <td>0.939046</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Std</td>
+      <td>Fwd IAT Max</td>
+      <td>0.937228</td>
+      <td>0.937228</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Std</td>
+      <td>Idle Max</td>
+      <td>0.936521</td>
+      <td>0.936521</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Std</td>
+      <td>Max Packet Length</td>
+      <td>0.933383</td>
+      <td>0.933383</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Std</td>
+      <td>Idle Mean</td>
+      <td>0.932239</td>
+      <td>0.932239</td>
+    </tr>
+    <tr>
+      <td>Bwd IAT Mean</td>
+      <td>Bwd IAT Min</td>
+      <td>0.930593</td>
+      <td>0.930593</td>
+    </tr>
+    <tr>
+      <td>Bwd Header Length</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.925853</td>
+      <td>0.925853</td>
+    </tr>
+    <tr>
+      <td>Packet Length Std</td>
+      <td>Packet Length Variance</td>
+      <td>0.922004</td>
+      <td>0.922004</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Std</td>
+      <td>Fwd IAT Max</td>
+      <td>0.92078</td>
+      <td>0.92078</td>
+    </tr>
+    <tr>
+      <td>Packet Length Mean</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.919579</td>
+      <td>0.919579</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>Packet Length Mean</td>
+      <td>0.919579</td>
+      <td>0.919579</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>Packet Length Std</td>
+      <td>0.91927</td>
+      <td>0.91927</td>
+    </tr>
+    <tr>
+      <td>Packet Length Std</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.91927</td>
+      <td>0.91927</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length.1</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.919154</td>
+      <td>0.919154</td>
+    </tr>
+    <tr>
+      <td>Fwd Header Length</td>
+      <td>act_data_pkt_fwd</td>
+      <td>0.919154</td>
+      <td>0.919154</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>Fwd IAT Std</td>
+      <td>0.917818</td>
+      <td>0.917818</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Std</td>
+      <td>Idle Max</td>
+      <td>0.916915</td>
+      <td>0.916915</td>
+    </tr>
+    <tr>
+      <td>Max Packet Length</td>
+      <td>Packet Length Mean</td>
+      <td>0.916843</td>
+      <td>0.916843</td>
+    </tr>
+    <tr>
+      <td>Average Packet Size</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.913815</td>
+      <td>0.913815</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>Average Packet Size</td>
+      <td>0.913815</td>
+      <td>0.913815</td>
+    </tr>
+    <tr>
+      <td>Max Packet Length</td>
+      <td>Average Packet Size</td>
+      <td>0.912115</td>
+      <td>0.912115</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Std</td>
+      <td>Idle Min</td>
+      <td>0.909931</td>
+      <td>0.909931</td>
+    </tr>
+    <tr>
+      <td>Fwd IAT Std</td>
+      <td>Idle Mean</td>
+      <td>0.906337</td>
+      <td>0.906337</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>Max Packet Length</td>
+      <td>0.905873</td>
+      <td>0.905873</td>
+    </tr>
+    <tr>
+      <td>Max Packet Length</td>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.905873</td>
+      <td>0.905873</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Mean</td>
+      <td>Fwd IAT Mean</td>
+      <td>0.904901</td>
+      <td>0.904901</td>
+    </tr>
+  </tbody>
+</table><h3>table12_distribution_summary</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature</th>
+      <th>skewness</th>
+      <th>min</th>
+      <th>median</th>
+      <th>95th_percentile</th>
+      <th>99th_percentile</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Total Fwd Packets</td>
+      <td>104.808</td>
+      <td>1</td>
+      <td>2</td>
+      <td>19</td>
+      <td>50</td>
+      <td>9,449</td>
+    </tr>
+    <tr>
+      <td>Total Backward Packets</td>
+      <td>97.7283</td>
+      <td>0</td>
+      <td>2</td>
+      <td>17</td>
+      <td>58</td>
+      <td>10,063</td>
+    </tr>
+    <tr>
+      <td>Flow Bytes/s</td>
+      <td>49.6933</td>
+      <td>0</td>
+      <td>4,610</td>
+      <td>2,261,171</td>
+      <td>12,333,333</td>
+      <td>2,070,000,000</td>
+    </tr>
+    <tr>
+      <td>Fwd Packet Length Mean</td>
+      <td>9.26745</td>
+      <td>0</td>
+      <td>34</td>
+      <td>143.003</td>
+      <td>1,036</td>
+      <td>4,672</td>
+    </tr>
+    <tr>
+      <td>Flow Packets/s</td>
+      <td>5.52508</td>
+      <td>0.0169631</td>
+      <td>113.915</td>
+      <td>666,667</td>
+      <td>2,000,000</td>
+      <td>3,000,000</td>
+    </tr>
+    <tr>
+      <td>Flow Duration</td>
+      <td>2.16918</td>
+      <td>0</td>
+      <td>31,288</td>
+      <td>101,162,713</td>
+      <td>117,814,989</td>
+      <td>119,999,443</td>
+    </tr>
+  </tbody>
+</table><h3>table13_flow_duration_by_class</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label_binary</th>
+      <th>count</th>
+      <th>min</th>
+      <th>Q1</th>
+      <th>median</th>
+      <th>Q3</th>
+      <th>max</th>
+      <th>IQR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ATTACK</td>
+      <td>9807</td>
+      <td>0</td>
+      <td>49</td>
+      <td>272,843</td>
+      <td>84,007,264</td>
+      <td>118,353,342</td>
+      <td>84,007,216</td>
+    </tr>
+    <tr>
+      <td>BENIGN</td>
+      <td>40190</td>
+      <td>0</td>
+      <td>173</td>
+      <td>31,011</td>
+      <td>433,628</td>
+      <td>119,999,443</td>
+      <td>433,454</td>
+    </tr>
+  </tbody>
+</table><h3>table14_attack_types</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label</th>
+      <th>count</th>
+      <th>pct_of_attacks</th>
+      <th>pct_of_dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DoS Hulk</td>
+      <td>231073</td>
+      <td>41.437</td>
+      <td>8.163</td>
+    </tr>
+    <tr>
+      <td>PortScan</td>
+      <td>158930</td>
+      <td>28.5</td>
+      <td>5.6144</td>
+    </tr>
+    <tr>
+      <td>DDoS</td>
+      <td>128027</td>
+      <td>22.958</td>
+      <td>4.5227</td>
+    </tr>
+    <tr>
+      <td>DoS GoldenEye</td>
+      <td>10293</td>
+      <td>1.846</td>
+      <td>0.3636</td>
+    </tr>
+    <tr>
+      <td>FTP-Patator</td>
+      <td>7938</td>
+      <td>1.423</td>
+      <td>0.2804</td>
+    </tr>
+    <tr>
+      <td>SSH-Patator</td>
+      <td>5897</td>
+      <td>1.057</td>
+      <td>0.2083</td>
+    </tr>
+    <tr>
+      <td>DoS slowloris</td>
+      <td>5796</td>
+      <td>1.039</td>
+      <td>0.2048</td>
+    </tr>
+    <tr>
+      <td>DoS Slowhttptest</td>
+      <td>5499</td>
+      <td>0.986</td>
+      <td>0.1943</td>
+    </tr>
+    <tr>
+      <td>Bot</td>
+      <td>1966</td>
+      <td>0.353</td>
+      <td>0.0695</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Brute Force</td>
+      <td>1507</td>
+      <td>0.27</td>
+      <td>0.0532</td>
+    </tr>
+    <tr>
+      <td>Web Attack - XSS</td>
+      <td>652</td>
+      <td>0.117</td>
+      <td>0.023</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>36</td>
+      <td>0.006</td>
+      <td>0.0013</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Sql Injection</td>
+      <td>21</td>
+      <td>0.004</td>
+      <td>0.0007</td>
+    </tr>
+    <tr>
+      <td>Heartbleed</td>
+      <td>11</td>
+      <td>0.002</td>
+      <td>0.0004</td>
+    </tr>
+  </tbody>
+</table><h3>table15_label_by_capture_file</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label</th>
+      <th>Friday-WorkingHours-Afternoon-DDos</th>
+      <th>Friday-WorkingHours-Afternoon-PortScan</th>
+      <th>Friday-WorkingHours-Morning</th>
+      <th>Monday-WorkingHours</th>
+      <th>Thursday-WorkingHours-Afternoon-Infilteration</th>
+      <th>Thursday-WorkingHours-Morning-WebAttacks</th>
+      <th>Tuesday-WorkingHours</th>
+      <th>Wednesday-workingHours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BENIGN</td>
+      <td>97718</td>
+      <td>127537</td>
+      <td>189067</td>
+      <td>529918</td>
+      <td>288566</td>
+      <td>168186</td>
+      <td>432074</td>
+      <td>440031</td>
+    </tr>
+    <tr>
+      <td>Bot</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1966</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>DDoS</td>
+      <td>128027</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>DoS GoldenEye</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>10293</td>
+    </tr>
+    <tr>
+      <td>DoS Hulk</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>231073</td>
+    </tr>
+    <tr>
+      <td>DoS Slowhttptest</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5499</td>
+    </tr>
+    <tr>
+      <td>DoS slowloris</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5796</td>
+    </tr>
+    <tr>
+      <td>FTP-Patator</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7938</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Heartbleed</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>36</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>PortScan</td>
+      <td>0</td>
+      <td>158930</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>SSH-Patator</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5897</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Brute Force</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1507</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Sql Injection</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>21</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Web Attack - XSS</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>652</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table><h3>table16_top_port_per_attack</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label</th>
+      <th>top_port</th>
+      <th>top_port_share_pct</th>
+      <th>distinct_ports</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DoS GoldenEye</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>DoS Hulk</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>DoS Slowhttptest</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>DoS slowloris</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Heartbleed</td>
+      <td>444</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>444</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SSH-Patator</td>
+      <td>22</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Brute Force</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Sql Injection</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Web Attack - XSS</td>
+      <td>80</td>
+      <td>100</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>DDoS</td>
+      <td>80</td>
+      <td>100</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>FTP-Patator</td>
+      <td>21</td>
+      <td>99.99</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Bot</td>
+      <td>8080</td>
+      <td>64.14</td>
+      <td>706</td>
+    </tr>
+    <tr>
+      <td>PortScan</td>
+      <td>80</td>
+      <td>0.23</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table><h3>table17_init_win_sentinel_share</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Label_binary</th>
+      <th>Init_Win_bytes_forward</th>
+      <th>Init_Win_bytes_backward</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ATTACK</td>
+      <td>0</td>
+      <td>21.98</td>
+    </tr>
+    <tr>
+      <td>BENIGN</td>
+      <td>44.04</td>
+      <td>58.03</td>
+    </tr>
+  </tbody>
+</table><h3>table18_mutual_information_top20</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature</th>
+      <th>mutual_information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Average Packet Size</td>
+      <td>0.328026</td>
+    </tr>
+    <tr>
+      <td>Packet Length Variance</td>
+      <td>0.326223</td>
+    </tr>
+    <tr>
+      <td>Packet Length Std</td>
+      <td>0.325752</td>
+    </tr>
+    <tr>
+      <td>Packet Length Mean</td>
+      <td>0.298735</td>
+    </tr>
+    <tr>
+      <td>Total Length of Bwd Packets</td>
+      <td>0.293004</td>
+    </tr>
+    <tr>
+      <td>Subflow Bwd Bytes</td>
+      <td>0.289906</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Mean</td>
+      <td>0.280333</td>
+    </tr>
+    <tr>
+      <td>Total Length of Fwd Packets</td>
+      <td>0.277942</td>
+    </tr>
+    <tr>
+      <td>Avg Bwd Segment Size</td>
+      <td>0.276069</td>
+    </tr>
+    <tr>
+      <td>Destination Port</td>
+      <td>0.27366</td>
+    </tr>
+    <tr>
+      <td>Subflow Fwd Bytes</td>
+      <td>0.273172</td>
+    </tr>
+    <tr>
+      <td>Init_Win_bytes_forward</td>
+      <td>0.267291</td>
+    </tr>
+    <tr>
+      <td>Max Packet Length</td>
+      <td>0.263124</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Max</td>
+      <td>0.259568</td>
+    </tr>
+    <tr>
+      <td>Init_Win_bytes_backward</td>
+      <td>0.250328</td>
+    </tr>
+    <tr>
+      <td>Fwd Packet Length Max</td>
+      <td>0.244034</td>
+    </tr>
+    <tr>
+      <td>Flow IAT Max</td>
+      <td>0.200465</td>
+    </tr>
+    <tr>
+      <td>Flow Bytes/s</td>
+      <td>0.192714</td>
+    </tr>
+    <tr>
+      <td>Flow Duration</td>
+      <td>0.190881</td>
+    </tr>
+    <tr>
+      <td>Bwd Packet Length Std</td>
+      <td>0.184413</td>
+    </tr>
+  </tbody>
+</table><h2>Figures</h2><h3>figure01_class_distribution</h3><img src="figures/figure01_class_distribution.png" alt="figure01_class_distribution" style="max-width:100%;"><h3>figure02_benign_vs_attack</h3><img src="figures/figure02_benign_vs_attack.png" alt="figure02_benign_vs_attack" style="max-width:100%;"><h3>figure03_correlation_heatmap</h3><img src="figures/figure03_correlation_heatmap.png" alt="figure03_correlation_heatmap" style="max-width:100%;"><h3>figure04_key_feature_distributions</h3><img src="figures/figure04_key_feature_distributions.png" alt="figure04_key_feature_distributions" style="max-width:100%;"><h3>figure05_flow_duration_by_class</h3><img src="figures/figure05_flow_duration_by_class.png" alt="figure05_flow_duration_by_class" style="max-width:100%;"><h3>figure06_attack_type_breakdown</h3><img src="figures/figure06_attack_type_breakdown.png" alt="figure06_attack_type_breakdown" style="max-width:100%;"><h3>figure07_mutual_information_top20</h3><img src="figures/figure07_mutual_information_top20.png" alt="figure07_mutual_information_top20" style="max-width:100%;"></body></html>

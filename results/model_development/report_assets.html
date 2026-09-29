@@ -1,0 +1,769 @@
+<!doctype html><html><head><meta charset='utf-8'><title>CIC-IDS2017 — model development tables and figures</title><style>body{font-family:Arial,sans-serif;margin:24px;}table{border-collapse:collapse;font-size:12px;margin-bottom:24px;}th,td{border:1px solid #999;padding:4px 8px;text-align:right;}th{background:#eee;}</style></head><body><h1>CIC-IDS2017 — model development tables and figures</h1><p><b>Tables:</b> select a table, copy it and paste it into Word or Google Docs. <b>Figures:</b> right-click an image and copy it, or insert the PNG files from the <code>figures/</code> folder.</p><h2>Tables</h2><h3>autoencoder_operating_points</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Threshold</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>FPR</th>
+      <th>TP</th>
+      <th>FN</th>
+      <th>FP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Autoencoder (validation F1 threshold)</td>
+      <td>0.001953</td>
+      <td>0.829073</td>
+      <td>0.741404</td>
+      <td>0.782791</td>
+      <td>0.0310098</td>
+      <td>63046</td>
+      <td>21990</td>
+      <td>12998</td>
+    </tr>
+    <tr>
+      <td>Autoencoder (benign P95 threshold)</td>
+      <td>0.001544</td>
+      <td>0.759713</td>
+      <td>0.789195</td>
+      <td>0.774173</td>
+      <td>0.0506396</td>
+      <td>67110</td>
+      <td>17926</td>
+      <td>21226</td>
+    </tr>
+  </tbody>
+</table><h3>data_filtering_summary</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Rows in prepared file</th>
+      <th>Removed as repeated copies</th>
+      <th>Removed as label-conflicting rows</th>
+      <th>Label-conflicting patterns</th>
+      <th>Rows modelled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2830743</td>
+      <td>302757</td>
+      <td>7020</td>
+      <td>698</td>
+      <td>2520966</td>
+    </tr>
+  </tbody>
+</table><h3>exploratory_bottleneck</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Bottleneck size</th>
+      <th>Validation AP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8</td>
+      <td>0.9013</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>0.8498</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>0.8657</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>0.8381</td>
+    </tr>
+  </tbody>
+</table><h3>exploratory_family_exclusion</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Family in classifier training</th>
+      <th>Threshold source</th>
+      <th>Threshold</th>
+      <th>Recall on FTP-Patator (%)</th>
+      <th>Precision</th>
+      <th>FPR</th>
+      <th>FP</th>
+      <th>FN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>Yes</td>
+      <td>original validation F1</td>
+      <td>0.713471</td>
+      <td>99.82</td>
+      <td>0.144809</td>
+      <td>0.015681</td>
+      <td>6573</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>No</td>
+      <td>original validation F1 (transferred)</td>
+      <td>0.713471</td>
+      <td>99.28</td>
+      <td>0.146081</td>
+      <td>0.015438</td>
+      <td>6471</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>No</td>
+      <td>family-free validation F1</td>
+      <td>0.719604</td>
+      <td>99.28</td>
+      <td>0.148591</td>
+      <td>0.015133</td>
+      <td>6343</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>Yes</td>
+      <td>original validation F1</td>
+      <td>0.84668</td>
+      <td>99.91</td>
+      <td>0.870993</td>
+      <td>0.000394</td>
+      <td>165</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>No</td>
+      <td>original validation F1 (transferred)</td>
+      <td>0.84668</td>
+      <td>10.04</td>
+      <td>0.425856</td>
+      <td>0.00036</td>
+      <td>151</td>
+      <td>1003</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>No</td>
+      <td>family-free validation F1</td>
+      <td>0.868146</td>
+      <td>2.42</td>
+      <td>0.164634</td>
+      <td>0.000327</td>
+      <td>137</td>
+      <td>1088</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>Weights: No</td>
+      <td>original validation F1</td>
+      <td>0.00195347</td>
+      <td>61.08</td>
+      <td>0.049784</td>
+      <td>0.03101</td>
+      <td>12998</td>
+      <td>434</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>Weights: No</td>
+      <td>family-free validation F1</td>
+      <td>0.00199793</td>
+      <td>52.91</td>
+      <td>0.04535</td>
+      <td>0.029631</td>
+      <td>12420</td>
+      <td>525</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>Weights: No</td>
+      <td>benign validation P95 (no attack labels)</td>
+      <td>0.00154448</td>
+      <td>99.01</td>
+      <td>0.04944</td>
+      <td>0.05064</td>
+      <td>21226</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table><h3>feature_reduction</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Step</th>
+      <th>Features remaining</th>
+      <th>Removed at this step</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Original columns</td>
+      <td>80</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>After removing leakage columns</td>
+      <td>78</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>After removing constant features</td>
+      <td>70</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>After removing redundant features</td>
+      <td>44</td>
+      <td>26</td>
+    </tr>
+  </tbody>
+</table><h3>model_comparison</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Threshold</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>AP</th>
+      <th>ROC-AUC</th>
+      <th>FPR</th>
+      <th>FNR</th>
+      <th>Accuracy</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+      <th>FN</th>
+      <th>Train time (s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.713471</td>
+      <td>0.925631</td>
+      <td>0.962075</td>
+      <td>0.943501</td>
+      <td>0.930805</td>
+      <td>0.992836</td>
+      <td>0.0156814</td>
+      <td>0.0379251</td>
+      <td>0.980567</td>
+      <td>81811</td>
+      <td>6573</td>
+      <td>412585</td>
+      <td>3225</td>
+      <td>5.7</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>0.84668</td>
+      <td>0.99806</td>
+      <td>0.998318</td>
+      <td>0.998189</td>
+      <td>0.999939</td>
+      <td>0.999982</td>
+      <td>0.000393646</td>
+      <td>0.00168164</td>
+      <td>0.999389</td>
+      <td>84893</td>
+      <td>165</td>
+      <td>418993</td>
+      <td>143</td>
+      <td>16.4</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>0.001953</td>
+      <td>0.829073</td>
+      <td>0.741404</td>
+      <td>0.782791</td>
+      <td>0.851112</td>
+      <td>0.949784</td>
+      <td>0.0310098</td>
+      <td>0.258596</td>
+      <td>0.930606</td>
+      <td>63046</td>
+      <td>12998</td>
+      <td>406160</td>
+      <td>21990</td>
+      <td>66.6</td>
+    </tr>
+  </tbody>
+</table><h3>operating_points</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Operating point</th>
+      <th>Threshold</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>Attacks missed</th>
+      <th>False alarms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Balanced (F1)</td>
+      <td>0.84668</td>
+      <td>0.99806</td>
+      <td>0.998318</td>
+      <td>143</td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <td>Recall-oriented (F2)</td>
+      <td>0.32884</td>
+      <td>0.996005</td>
+      <td>0.999741</td>
+      <td>22</td>
+      <td>341</td>
+    </tr>
+  </tbody>
+</table><h3>operational_counts</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Attacks detected</th>
+      <th>Attacks missed</th>
+      <th>False alarms</th>
+      <th>Benign correct</th>
+      <th>Detection rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>81811</td>
+      <td>3225</td>
+      <td>6573</td>
+      <td>412585</td>
+      <td>96.21%</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>84893</td>
+      <td>143</td>
+      <td>165</td>
+      <td>418993</td>
+      <td>99.83%</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>63046</td>
+      <td>21990</td>
+      <td>12998</td>
+      <td>406160</td>
+      <td>74.14%</td>
+    </tr>
+  </tbody>
+</table><h3>overfitting_check</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Train AP</th>
+      <th>Test AP</th>
+      <th>Gap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.9303</td>
+      <td>0.9308</td>
+      <td>-0.0005</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>1</td>
+      <td>0.9999</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>0.8501</td>
+      <td>0.8511</td>
+      <td>-0.001</td>
+    </tr>
+  </tbody>
+</table><h3>per_attack_recall</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Attack type</th>
+      <th>Test records</th>
+      <th>Logistic Regression recall %</th>
+      <th>LightGBM recall %</th>
+      <th>Autoencoder recall %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DoS Hulk</td>
+      <td>34635</td>
+      <td>96.31</td>
+      <td>99.96</td>
+      <td>89.97</td>
+    </tr>
+    <tr>
+      <td>DDoS</td>
+      <td>25632</td>
+      <td>99.84</td>
+      <td>99.97</td>
+      <td>78.86</td>
+    </tr>
+    <tr>
+      <td>PortScan</td>
+      <td>18092</td>
+      <td>98.46</td>
+      <td>99.99</td>
+      <td>49.79</td>
+    </tr>
+    <tr>
+      <td>DoS GoldenEye</td>
+      <td>1975</td>
+      <td>78.78</td>
+      <td>100</td>
+      <td>21.16</td>
+    </tr>
+    <tr>
+      <td>FTP-Patator</td>
+      <td>1115</td>
+      <td>99.82</td>
+      <td>99.91</td>
+      <td>61.08</td>
+    </tr>
+    <tr>
+      <td>DoS slowloris</td>
+      <td>1103</td>
+      <td>94.38</td>
+      <td>99.82</td>
+      <td>69.36</td>
+    </tr>
+    <tr>
+      <td>DoS Slowhttptest</td>
+      <td>990</td>
+      <td>89.8</td>
+      <td>100</td>
+      <td>42.22</td>
+    </tr>
+    <tr>
+      <td>SSH-Patator</td>
+      <td>635</td>
+      <td>13.7</td>
+      <td>99.69</td>
+      <td>57.01</td>
+    </tr>
+    <tr>
+      <td>Bot</td>
+      <td>399</td>
+      <td>0</td>
+      <td>72.68</td>
+      <td>3.26</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Brute Force</td>
+      <td>297</td>
+      <td>79.46</td>
+      <td>98.99</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Web Attack - XSS</td>
+      <td>149</td>
+      <td>84.56</td>
+      <td>100</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>7</td>
+      <td>0</td>
+      <td>57.14</td>
+      <td>85.71</td>
+    </tr>
+    <tr>
+      <td>Web Attack - Sql Injection</td>
+      <td>6</td>
+      <td>16.67</td>
+      <td>83.33</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Heartbleed</td>
+      <td>1</td>
+      <td>0</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table><h3>split_summary</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Split</th>
+      <th>Rows</th>
+      <th>Attacks</th>
+      <th>Attack rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>1512579</td>
+      <td>255108</td>
+      <td>16.87%</td>
+    </tr>
+    <tr>
+      <td>Validation</td>
+      <td>504193</td>
+      <td>85036</td>
+      <td>16.87%</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>504194</td>
+      <td>85036</td>
+      <td>16.87%</td>
+    </tr>
+  </tbody>
+</table><h3>threshold_sweep</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Threshold</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>False alarms</th>
+      <th>Missed attacks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.05</td>
+      <td>0.9948</td>
+      <td>0.9999</td>
+      <td>0.9973</td>
+      <td>446</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>0.1</td>
+      <td>0.9956</td>
+      <td>0.9999</td>
+      <td>0.9977</td>
+      <td>378</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>0.15</td>
+      <td>0.996</td>
+      <td>0.9999</td>
+      <td>0.9979</td>
+      <td>345</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>0.2</td>
+      <td>0.9962</td>
+      <td>0.9998</td>
+      <td>0.998</td>
+      <td>328</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>0.25</td>
+      <td>0.9964</td>
+      <td>0.9998</td>
+      <td>0.9981</td>
+      <td>307</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>0.3</td>
+      <td>0.9966</td>
+      <td>0.9998</td>
+      <td>0.9982</td>
+      <td>287</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>0.35</td>
+      <td>0.9968</td>
+      <td>0.9998</td>
+      <td>0.9983</td>
+      <td>275</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>0.4</td>
+      <td>0.9969</td>
+      <td>0.9997</td>
+      <td>0.9983</td>
+      <td>268</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>0.45</td>
+      <td>0.997</td>
+      <td>0.9997</td>
+      <td>0.9983</td>
+      <td>258</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>0.9971</td>
+      <td>0.9996</td>
+      <td>0.9984</td>
+      <td>248</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>0.55</td>
+      <td>0.9972</td>
+      <td>0.9996</td>
+      <td>0.9984</td>
+      <td>240</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>0.6</td>
+      <td>0.9973</td>
+      <td>0.9995</td>
+      <td>0.9984</td>
+      <td>230</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>0.65</td>
+      <td>0.9974</td>
+      <td>0.9994</td>
+      <td>0.9984</td>
+      <td>218</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>0.7</td>
+      <td>0.9977</td>
+      <td>0.9993</td>
+      <td>0.9985</td>
+      <td>199</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>0.75</td>
+      <td>0.9979</td>
+      <td>0.999</td>
+      <td>0.9985</td>
+      <td>177</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>0.8</td>
+      <td>0.9981</td>
+      <td>0.9989</td>
+      <td>0.9985</td>
+      <td>159</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td>0.85</td>
+      <td>0.9984</td>
+      <td>0.9987</td>
+      <td>0.9986</td>
+      <td>133</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <td>0.9</td>
+      <td>0.9986</td>
+      <td>0.9983</td>
+      <td>0.9985</td>
+      <td>118</td>
+      <td>144</td>
+    </tr>
+    <tr>
+      <td>0.95</td>
+      <td>0.9988</td>
+      <td>0.9979</td>
+      <td>0.9983</td>
+      <td>106</td>
+      <td>177</td>
+    </tr>
+  </tbody>
+</table><h3>validation_comparison</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Threshold</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>AP</th>
+      <th>ROC-AUC</th>
+      <th>FPR</th>
+      <th>FNR</th>
+      <th>Accuracy</th>
+      <th>TP</th>
+      <th>FP</th>
+      <th>TN</th>
+      <th>FN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.713471</td>
+      <td>0.928811</td>
+      <td>0.962169</td>
+      <td>0.945196</td>
+      <td>0.931804</td>
+      <td>0.993123</td>
+      <td>0.014961</td>
+      <td>0.037831</td>
+      <td>0.981182</td>
+      <td>81819</td>
+      <td>6271</td>
+      <td>412886</td>
+      <td>3217</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>0.84668</td>
+      <td>0.998413</td>
+      <td>0.998706</td>
+      <td>0.99856</td>
+      <td>0.999952</td>
+      <td>0.99999</td>
+      <td>0.000322075</td>
+      <td>0.00129357</td>
+      <td>0.999514</td>
+      <td>84926</td>
+      <td>135</td>
+      <td>419022</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <td>Autoencoder</td>
+      <td>0.001953</td>
+      <td>0.829861</td>
+      <td>0.73964</td>
+      <td>0.782157</td>
+      <td>0.852079</td>
+      <td>0.949998</td>
+      <td>0.0307641</td>
+      <td>0.26036</td>
+      <td>0.930513</td>
+      <td>62896</td>
+      <td>12895</td>
+      <td>406262</td>
+      <td>22140</td>
+    </tr>
+  </tbody>
+</table><h2>Figures</h2><h3>figure01_class_distribution_log_scale</h3><img src="figures/figure01_class_distribution_log_scale.png" alt="figure01_class_distribution_log_scale" style="max-width:100%;"><h3>figure02_preprocessing_distributions</h3><img src="figures/figure02_preprocessing_distributions.png" alt="figure02_preprocessing_distributions" style="max-width:100%;"><h3>figure03_logistic_coefficients</h3><img src="figures/figure03_logistic_coefficients.png" alt="figure03_logistic_coefficients" style="max-width:100%;"><h3>figure04_lightgbm_importance</h3><img src="figures/figure04_lightgbm_importance.png" alt="figure04_lightgbm_importance" style="max-width:100%;"><h3>figure05_autoencoder_training_history</h3><img src="figures/figure05_autoencoder_training_history.png" alt="figure05_autoencoder_training_history" style="max-width:100%;"><h3>figure06_validation_reconstruction_errors</h3><img src="figures/figure06_validation_reconstruction_errors.png" alt="figure06_validation_reconstruction_errors" style="max-width:100%;"><h3>figure07_test_precision_recall</h3><img src="figures/figure07_test_precision_recall.png" alt="figure07_test_precision_recall" style="max-width:100%;"><h3>figure08_validation_threshold_tradeoff</h3><img src="figures/figure08_validation_threshold_tradeoff.png" alt="figure08_validation_threshold_tradeoff" style="max-width:100%;"><h3>figure09_test_model_comparison</h3><img src="figures/figure09_test_model_comparison.png" alt="figure09_test_model_comparison" style="max-width:100%;"><h3>figure10_test_confusion_matrices</h3><img src="figures/figure10_test_confusion_matrices.png" alt="figure10_test_confusion_matrices" style="max-width:100%;"><h3>figure11_train_test_ap</h3><img src="figures/figure11_train_test_ap.png" alt="figure11_train_test_ap" style="max-width:100%;"><h3>figure12_per_attack_recall</h3><img src="figures/figure12_per_attack_recall.png" alt="figure12_per_attack_recall" style="max-width:100%;"><h3>figure13_exploratory_family_exclusion</h3><img src="figures/figure13_exploratory_family_exclusion.png" alt="figure13_exploratory_family_exclusion" style="max-width:100%;"></body></html>

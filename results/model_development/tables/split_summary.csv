@@ -1,0 +1,4 @@
+Split,Rows,Attacks,Attack rate
+Train,1512579,255108,16.87%
+Validation,504193,85036,16.87%
+Test,504194,85036,16.87%

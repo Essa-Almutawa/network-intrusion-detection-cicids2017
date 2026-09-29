@@ -1,0 +1,4 @@
+Model,Train AP,Test AP,Gap
+Logistic Regression,0.9303,0.9308,-0.0005
+LightGBM,1.0,0.9999,0.0
+Autoencoder,0.8501,0.8511,-0.001

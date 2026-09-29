@@ -1,0 +1,15 @@
+Label,top_port,top_port_share_pct,distinct_ports
+DoS GoldenEye,80,100.0,1
+DoS Hulk,80,100.0,1
+DoS Slowhttptest,80,100.0,1
+DoS slowloris,80,100.0,1
+Heartbleed,444,100.0,1
+Infiltration,444,100.0,1
+SSH-Patator,22,100.0,1
+Web Attack - Brute Force,80,100.0,1
+Web Attack - Sql Injection,80,100.0,1
+Web Attack - XSS,80,100.0,1
+DDoS,80,100.0,4
+FTP-Patator,21,99.99,2
+Bot,8080,64.14,706
+PortScan,80,0.23,1000

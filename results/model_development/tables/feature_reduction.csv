@@ -1,0 +1,5 @@
+Step,Features remaining,Removed at this step
+Original columns,80,0
+After removing leakage columns,78,2
+After removing constant features,70,8
+After removing redundant features,44,26

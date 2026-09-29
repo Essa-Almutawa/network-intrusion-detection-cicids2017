@@ -1,0 +1,6 @@
+kept_column,duplicate_column
+Total Fwd Packets,Subflow Fwd Packets
+Total Backward Packets,Subflow Bwd Packets
+Fwd PSH Flags,SYN Flag Count
+Fwd URG Flags,CWE Flag Count
+Fwd Header Length,Fwd Header Length.1

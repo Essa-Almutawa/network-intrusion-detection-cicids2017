@@ -1,0 +1,6 @@
+metric,value,pct_of_rows
+Full-row duplicates,256479,9.06048341371859
+Feature-level duplicates,309079,10.918652805994752
+Duplicate feature groups,95479,
+Groups with conflicting labels,698,
+Rows in conflicting groups,7020,0.2479914283988338

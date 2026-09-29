@@ -1,0 +1,4 @@
+Model,Attacks detected,Attacks missed,False alarms,Benign correct,Detection rate
+Logistic Regression,81811,3225,6573,412585,96.21%
+LightGBM,84893,143,165,418993,99.83%
+Autoencoder,63046,21990,12998,406160,74.14%

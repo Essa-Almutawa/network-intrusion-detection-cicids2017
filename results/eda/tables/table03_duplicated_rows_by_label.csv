@@ -1,0 +1,12 @@
+Label,pct_of_duplicated_rows
+BENIGN,58.564
+PortScan,25.165
+DoS Hulk,14.73
+SSH-Patator,0.699
+FTP-Patator,0.607
+DoS slowloris,0.126
+DoS Slowhttptest,0.08
+Web Attack � Brute Force,0.015
+DDoS,0.005
+Bot,0.005
+DoS GoldenEye,0.003
