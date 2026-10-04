@@ -1,4 +1,6 @@
-# Network Intrusion Detection on CIC-IDS2017
+# DIRA: Network Intrusion Detection on CIC-IDS2017
+
+**[Final report (PDF)](Docs/DIRA_Report.pdf) · [Presentation (PDF)](Docs/DIRA_Presentation.pdf)**
 
 This project classifies network flows from the CIC-IDS2017 dataset as **benign** or **malicious** (binary classification). It compares three approaches:
 
@@ -28,9 +30,12 @@ network-intrusion-detection-cicids2017/
 │   ├── 01_eda_and_data_preparation.ipynb
 │   └── 02_model_development.ipynb
 ├── models/                       trained models (git-ignored) + config.json
-└── results/
-    ├── eda/                      notebook 01: tables/, figures/, report_assets.html
-    └── model_development/        notebook 02: tables/, figures/, report_assets.html
+├── results/
+│   ├── eda/                      notebook 01: tables/, figures/, report_assets.html
+│   └── model_development/        notebook 02: tables/, figures/, report_assets.html
+└── Docs/
+    ├── DIRA_Report.pdf           final project report
+    └── DIRA_Presentation.pdf     final presentation slides
 ```
 
 ## Data
@@ -70,7 +75,7 @@ No rows or columns are removed in notebook 01. Imputation is deliberately left t
    - Logistic Regression and Autoencoder: imputation plus a uniform `QuantileTransformer`.
 
    Everything is fitted on the training split only.
-7. Train the models. LightGBM uses early stopping on validation AP. The Autoencoder (45-64-32-16-32-64-45) is trained on benign training flows only.
+7. Train the models. LightGBM uses early stopping on validation AP. The Autoencoder (44-64-32-16-32-64-44) is trained on benign training flows only.
 8. Choose each model's threshold (F1-optimal) and the final model (by validation average precision) on the **validation** set. The test set is used only for reporting.
 9. Run diagnostics:
    - train/test AP gap, single-feature AUC scan and a trivial-baseline comparison
@@ -130,6 +135,12 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/02_model_developme
 ```
 
 Allow about 8 GB of RAM. Notebook 02 prints a warning if the checkpoint's SHA-256 differs from the reference value. This can happen with other pandas or pyarrow versions even when the data are identical. Training times depend on the machine.
+
+## Team
+
+Essa Almutawa · Dana Alghamdi · Rana Alziyadi · Raneem Alqahtani
+
+Data Science Bootcamp, Saudi Digital Academy in partnership with WeCloudData, 2026
 
 ## Dataset credit
 
