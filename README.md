@@ -1,4 +1,4 @@
-#DIRA: Network Intrusion Detection on CIC-IDS2017
+# DIRA: Network Intrusion Detection on CIC-IDS2017
 
 **[Final report (PDF)](Docs/DIRA_Report.pdf) · [Presentation (PDF)](Docs/DIRA_Presentation.pdf)**
 
