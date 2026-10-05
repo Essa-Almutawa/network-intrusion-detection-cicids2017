@@ -147,5 +147,5 @@ Data Science Bootcamp, Saudi Digital Academy in partnership with WeCloudData, 20
 CIC-IDS2017, Canadian Institute for Cybersecurity, University of New Brunswick. I. Sharafaldin, A. H. Lashkari, A. A. Ghorbani, *Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization*, ICISSP 2018. Follow the dataset's terms of use.
 
 ## License
-
+      
 Code is released under the [MIT License](LICENSE). The CIC-IDS2017 dataset is not included and remains subject to its own terms.
